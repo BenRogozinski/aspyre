@@ -1,0 +1,17 @@
+.basePage {
+  background: var(--background-blue);
+  background: linear-gradient(283deg, var(--background-blue) 0%, var(--background-purple) 95%);
+  display: flex;
+  flex-flow: column;
+  gap: var(--base-component-spacing);
+  min-height: 100vh;
+  padding: var(--base-component-spacing);
+}
+
+.content {
+  background-color: var(--base-component-background);
+  border-radius: var(--border-radius);
+  flex-grow: 1;
+  padding: 10px;
+  width: 100%;
+}

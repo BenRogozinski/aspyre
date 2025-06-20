@@ -1,0 +1,59 @@
+.navBar {
+  display: flex;
+  flex-flow: row;
+  gap: var(--base-component-spacing);
+  height: 60px;
+}
+
+.navGroup {
+  align-items: center;
+  background-color: var(--base-component-background);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-flow: row;
+  gap: 20px;
+  padding-inline: 10px;
+}
+
+.navGroupLeft {
+  flex-grow: 1;
+}
+
+.navItem {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  font-size: 20px;
+}
+
+.navItem img {
+  margin-inline: 10px;
+}
+
+.navDivider {
+  background-color: var(--text-color);
+  height: 40px;
+  width: 1px;
+}
+
+/*
+  Credit to Angelos Chalaris
+  https://www.30secondsofcode.org/css/s/hover-underline-animation/
+*/
+
+.hoverUnderline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-color);
+  transition: transform 0.2s ease-out;
+}
+
+.hoverUnderline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
+}
