@@ -3,26 +3,46 @@
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
-  const mobile = useMediaQuery({ maxWidth: 800 });
+  const handleDropdown = () => {
+    const icon = document.getElementById("dropdownIcon");
+    const navBar = document.getElementById("navBar");
+    icon?.classList.toggle(styles.open);
+    navBar?.classList.toggle(styles.expanded);
+  }
 
   return (
-    <nav className={styles.navBar} suppressHydrationWarning>
+    <nav
+      id="navBar"
+      className={styles.navBar}
+      suppressHydrationWarning
+    >
       <div className={`${styles.navGroup} ${styles.navGroupLeft}`}>
-        <Link
-          href={"/"}
-          className={styles.navItem}
-        >
+        <div className={styles.topAlignmentContainer}>
+          <Link
+            href={"/"}
+            className={styles.navItem}
+          >
+            <Image
+              src="/aspyre.svg"
+              alt="Aspyre logo"
+              width={36}
+              height={40}
+              priority
+            />
+          </Link>
           <Image
-            src="/aspyre.svg"
+            id="dropdownIcon"
+            className={`${styles.dropdownIcon} ${styles.navItem}`}
+            src="/arrow.svg"
             alt="Aspyre logo"
-            width={36}
-            height={40}
+            width={30}
+            height={30}
+            onClick={handleDropdown}
             priority
           />
-        </Link>
+        </div>
         <div className={styles.navDivider}></div>
         <Link
           href={"/myInfo"}
@@ -49,9 +69,9 @@ const Navbar = () => {
           Tools
         </Link>
       </div>
-      <div className={styles.navGroup}>
+      <div className={`${styles.navGroup} ${styles.navGroupRight}`}>
         <Link className={styles.navItem} href={"#"}>
-          {mobile ? "MOBILE" : "DESKTOP"}
+          Doe, John
         </Link>
         <a className={styles.navItem}>
           <Image
