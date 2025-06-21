@@ -3,7 +3,7 @@ import styles from "./BasePage.module.css";
 import Navbar from "../Navbar/Navbar";
 
 type BasePageProps = {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const BasePage = ({ children }: BasePageProps) => {

@@ -9,7 +9,7 @@
 }
 
 .content {
-  background-color: var(--base-component-background);
+  background-color: var(--component-background-base);
   border-radius: var(--border-radius);
   flex-grow: 1;
   padding: 10px;

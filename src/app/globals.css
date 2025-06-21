@@ -1,12 +1,27 @@
 :root {
-  /* Colors */
+  /* Text colors */
   --text-color: #ffffff;
+  --text-color-dark: #dfdfdf;
+  --text-color-darker: #afafaf;
+
+  /* Background / accent colors */
   --background-blue: #3f5efb;
   --background-purple: #472081;
-  --base-component-background: #0000005f;
+  --background-magenta: #8e2b9b;
+  --accent-blue: #3f5efbbf;
+  --accent-purple: #472081bf;
+  --accent-magenta: #8e2b9bbf;
+
+  /* Component background colors */
+  --component-background-base: #0000005f;
+  --component-background-lighter: #bbbbff50;
+  --component-background-light: #bbbbff40;
+  --component-background-normal: #bbbbff30;
+  --component-background-dark: #bbbbff20;
+  --component-background-darker: #bbbbff10;
 
   /* Global measurements */
-  --border-radius: 12px;
+  --border-radius: 16px;
   --base-component-spacing: 6px;
 }
 
@@ -18,8 +33,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,6 +45,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  display: inline-block;
-  position: relative;
 }
