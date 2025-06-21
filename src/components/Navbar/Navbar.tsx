@@ -36,7 +36,7 @@ const Navbar = () => {
             id="dropdownIcon"
             className={`${styles.dropdownIcon} ${styles.navItem}`}
             src="/expand.svg"
-            alt="Expand menu icon"
+            alt=""
             width={30}
             height={30}
             onClick={handleDropdown}
@@ -76,7 +76,7 @@ const Navbar = () => {
         <a className={styles.navItem}>
           <Image
             src="/aspyre.svg"
-            alt="Aspyre logo"
+            alt="Profile picture"
             width={36}
             height={40}
             priority
