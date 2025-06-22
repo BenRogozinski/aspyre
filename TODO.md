@@ -2,7 +2,7 @@
 
 #### Inputs
 - [x] Button
-- [ ] Checkbox
+- [x] Checkbox
 - [ ] Radio buttons
 
 #### Primitive data display
