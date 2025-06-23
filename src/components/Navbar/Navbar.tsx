@@ -1,21 +1,20 @@
 "use client"
 
+import { useState } from "react";
 import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   const handleDropdown = () => {
-    const icon = document.getElementById("dropdownIcon");
-    const navBar = document.getElementById("navBar");
-    icon?.classList.toggle(styles.open);
-    navBar?.classList.toggle(styles.expanded);
-  }
+    setIsDropdownOpen((prevState) => !prevState);
+  };
 
   return (
     <nav
-      id="navBar"
-      className={styles.navBar}
+      className={`${styles.navBar} ${isDropdownOpen ? styles.expanded : ""}`}
       suppressHydrationWarning
     >
       <div className={`${styles.navGroup} ${styles.navGroupLeft}`}>
@@ -33,8 +32,7 @@ const Navbar = () => {
             />
           </Link>
           <Image
-            id="dropdownIcon"
-            className={`${styles.dropdownIcon} ${styles.navItem}`}
+            className={`${styles.dropdownIcon} ${styles.navItem} ${isDropdownOpen ? styles.open : ""}`}
             src="/expand.svg"
             alt=""
             width={30}
@@ -85,6 +83,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar;
